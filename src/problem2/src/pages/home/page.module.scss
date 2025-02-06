@@ -1,0 +1,23 @@
+.container {
+    background : rgb(86, 22, 50);
+    background : radial-gradient(circle, rgba(86, 22, 50, 1) 0%, rgba(18, 18, 33, 1) 46%);
+    height     : calc(100vh - 68.5px);
+    display    : flex;
+    align-items: center;
+
+    .title {
+        color        : white;
+        font-size    : 3rem;
+        margin-bottom: 3.5rem;
+
+        @media screen and (max-width: 600px) {
+            font-size: 2rem
+        }
+    }
+
+    .form {
+        background-color: white;
+        border-radius   : 20px;
+        padding         : 2rem;
+    }
+}

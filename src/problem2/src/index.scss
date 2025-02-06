@@ -1,0 +1,22 @@
+:root {
+  font-family            : Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-synthesis         : none;
+  text-rendering         : optimizeLegibility;
+  -webkit-font-smoothing : antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  overflow-x: hidden;
+}
+
+body {
+  margin          : 0;
+  background-color: white;
+  padding         : 0 !important;
+
+}
+
+.MuiTableCell-root {
+  border   : none !important;
+  color    : white !important;
+  font-size: 1.1rem !important;
+}
