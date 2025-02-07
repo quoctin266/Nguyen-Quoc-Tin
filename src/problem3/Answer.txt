@@ -1,0 +1,19 @@
+1. Interface FormattedWalletBalance can inherit 2 properties from interface WalletBalance instead of re-declaring them, inheritance will make the code easier to modify and maintain
+
+2. children prop was not used, this can make the code misleading => remove it if unused
+
+3. function getPriority accept an argument with type "any", this is bad practice in Typescript, considering the logic in this function, the type should be string
+
+4. useMemo has an unnecessary dependency, "prices" was not used, this leads to unnecessary re-calculating of the value and increase computational cost
+
+5. Problems with the filter function inside the useMemo:                 
+    "balancePriority" was computed but not used => Remove it. "lhsPriority" was not defined. 
+    Property "blockchain" was not defined inside WalletBalance making it possibly undefined => If it really exist, define it inside the interface.
+
+6. Incomplete sort function, incase "leftPriority" equals "leftPriority", 0 should be returned
+
+7. "formattedBalances" array was computed but not used => This is confusing and also a wasted computation
+
+8. prices[balance.currency] is possibly undefined which can make "usdValue" a NaN, if it is further computed in "WalletRow" component, a run time error may occur
+
+9. index should not be used as key when rendering a list, it may lead to unexpected behavior
